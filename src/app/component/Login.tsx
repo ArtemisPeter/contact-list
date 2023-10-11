@@ -17,7 +17,6 @@ const Login = () => {
             .then(response => response.data),
             onSuccess: () => {
                 console.log('success');
-                
             },
             
     })
@@ -32,7 +31,7 @@ const Login = () => {
             email: emailInput.value,
             password:passwordInput.value,
         }
-        mutate(LogInCredentials);
+        mutate(LogInCredentials); //this will trigger the useMutation.
     }
 
   
