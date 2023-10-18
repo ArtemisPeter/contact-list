@@ -10,15 +10,13 @@ import UserDashBoard from './UserDashBoard'
 
 
 const LogInDialog = ({OnhandleLogInSuccess}) => {
-
-    const[isSuccess, setIsSuccess] = useState(true);
+  
 
     const {isLoading, isError, mutate, reset} = useMutation ({
         mutationFn: async (data) => {
           try {
             const response = await axios.post('https://hi-clist-be.vercel.app/api/user/login', data);
             if (response.status === 200) {
-              setIsSuccess(true);
               return response.data;
             } else {
               throw new Error('Login failed');
