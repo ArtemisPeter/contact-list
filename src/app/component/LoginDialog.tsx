@@ -5,8 +5,6 @@ import style from '../page.module.css'
 import {BsPersonCircle} from 'react-icons/bs'
 import axios from 'axios'
 import { useMutation } from '@tanstack/react-query'
-import Login from './Login'
-import UserDashBoard from './UserDashBoard'
 
 
 const LogInDialog = ({OnhandleLogInSuccess}) => {

@@ -1,13 +1,16 @@
 import React, {useState} from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
-import style from '../page.module.css'
-import {BsPersonCircle} from 'react-icons/bs'
+import SideMenu from './SideMenu'
+import TopNavbar from './TopNavbar'
 
 const UserDashBoard = () => {
 
-
   return (
-    <div>Logged In</div>
+    <>
+    <TopNavbar />
+    <SideMenu />
+    </>
+    
   )
 }
 
