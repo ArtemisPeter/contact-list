@@ -20,7 +20,7 @@
 
 .sidenav {
   height: 100%; 
-  width: 160px; 
+  width: 200px; 
   position: fixed;
   z-index: 0; 
   top: 1;
@@ -33,7 +33,7 @@
 .sidenav a {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 20px;
   color: white;
   display: block;
 }
@@ -44,7 +44,7 @@
 
 
 .main {
-  margin-left: 160px; /* Same as the width of the sidebar */
+  margin-left: 200px; /* Same as the width of the sidebar */
   padding: 0px 10px;
 }
 
