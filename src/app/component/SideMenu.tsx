@@ -8,7 +8,7 @@ const SideMenu = () => {
       <div className={style.sidenav}>
         <div className={style.a}>
         <a href="#">MENU</a>
-        <a href="#">My Contacts</a>
+        <a href="#" className={style.active}>My Contacts</a>
         <a href="#">Shared Contacts</a>
         <a href="#">Friends</a>
         </div>

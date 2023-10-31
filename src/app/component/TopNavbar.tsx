@@ -1,8 +1,11 @@
-import React from 'react'
+import React, {useState} from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
 import Avatar from './Avatar'
 
+
 const TopNavbar = () => {
+
+  
     return (
         <>
           <div className='container-fluid' style={{ display: 'flex', backgroundColor: '#778b90' }}>

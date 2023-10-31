@@ -1,20 +1,23 @@
 
-import React, { FormEvent, useState } from 'react'
+import React, { FormEvent, useContext, useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
 import style from '../page.module.css'
 import {BsPersonCircle} from 'react-icons/bs'
 import axios from 'axios'
 import { useMutation } from '@tanstack/react-query'
-
+import UserDataContext from '../context/UserDataContext'
 
 const LogInDialog = ({OnhandleLogInSuccess}) => {
   
+  const {User, getTheUserData} = useContext(UserDataContext);
 
     const {isLoading, isError, mutate, reset} = useMutation ({
         mutationFn: async (data) => {
           try {
             const response = await axios.post('https://hi-clist-be.vercel.app/api/user/login', data);
             if (response.status === 200) {
+              console.log(response.data);
+              getTheUserData(response.data);
               return response.data;
             } else {
               throw new Error('Login failed');
@@ -24,7 +27,6 @@ const LogInDialog = ({OnhandleLogInSuccess}) => {
           }
         },
         onSuccess: () => {
-            console.log("success");
             OnhandleLogInSuccess();
         },
       });
