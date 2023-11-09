@@ -1,6 +1,7 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
 import style from '../page.module.css'
+import MainContent from './MainContent'
 
 const SideMenu = () => {
   return (
@@ -8,7 +9,7 @@ const SideMenu = () => {
       <div className={style.sidenav}>
         <div className={style.a}>
         <a href="#">MENU</a>
-        <a href="#">My Contacts</a>
+        <a href="#" className={style.active}>My Contacts</a>
         <a href="#">Shared Contacts</a>
         <a href="#">Friends</a>
         </div>
@@ -16,7 +17,7 @@ const SideMenu = () => {
       </div>
 
       <div className={style.main}>
-        <h1>Main here</h1>
+        <MainContent />
       </div>
   
     </>
