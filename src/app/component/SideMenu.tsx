@@ -1,6 +1,7 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
 import style from '../page.module.css'
+import MainContent from './MainContent'
 
 const SideMenu = () => {
   return (
@@ -16,7 +17,7 @@ const SideMenu = () => {
       </div>
 
       <div className={style.main}>
-        <h1>Main here</h1>
+        <MainContent />
       </div>
   
     </>
