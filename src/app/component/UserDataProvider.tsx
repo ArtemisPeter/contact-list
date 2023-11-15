@@ -6,9 +6,8 @@ const UserDataProvider = ({ children }) => {
 
     function getTheUserData(userData){
         SetUser((prevState) => userData);
-       
     }
-    console.log(User);
+    
 
   return (
     <UserDataContext.Provider value = {{User, getTheUserData}}>{children}</UserDataContext.Provider>
