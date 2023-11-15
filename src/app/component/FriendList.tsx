@@ -41,22 +41,14 @@ const FriendList = () => {
         <div className='container'>
             <div className='row p-1'>
                 <div className='col-bg-12 mt-1'>
-                    <div className='container-fluid list-group bg-secondary p-2'>
-                        <div className='d-grid gap-2'>
-                            <div className="row">
-                                <div className='col-1'>
-                                    <BsPersonCircle size="30px" color="white" />
-                                </div>
-                                <div className='col-11'>
-                                    {myContact.map((contact, index) => (
-                                    <button type='button' key ={contact._id} className='btn btn-secondary' onClick={()=> showContactInfo(contact)}>
-                                        {contact.name}
-                                    </button>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
-                        
+                    <div className='d-grid gap-2 '>
+                    {myContact.map((contact)=>(
+                            <>
+                                <button type='button' className='btn bg-secondary mt-2 mb-2' onClick={()=> showContactInfo(contact)} style={{display: 'flex', alignItems: 'center', color: 'white'}}>
+                                    <BsPersonCircle size="30px" color="white" /><span style={{marginLeft: '8px'}}>{contact.name}</span>
+                                </button> 
+                            </>
+                        ))}
                     </div>
                 </div>
             </div>
