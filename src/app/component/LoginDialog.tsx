@@ -16,7 +16,6 @@ const LogInDialog = ({OnhandleLogInSuccess}) => {
           try {
             const response = await axios.post('https://hi-clist-be.vercel.app/api/user/login', data);
             if (response.status === 200) {
-              console.log(response.data);
               getTheUserData(response.data);
               return response.data;
             } else {
